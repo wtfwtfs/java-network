@@ -1,0 +1,52 @@
+HTTP/1.1 200 
+Accept-Ranges: bytes
+ETag: W/"1169-1705018489624"
+Last-Modified: Fri, 12 Jan 2024 00:14:49 GMT
+Content-Type: text/html
+Content-Length: 1169
+Date: Fri, 12 Jan 2024 01:56:29 GMT
+Connection: close
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>파일 업로드</title>
+<script type="text/javascript">
+function submitContents() {
+	document.form.action='http://192.168.54.71/attach2/Multipart';
+	document.form.submit();
+}
+</script>
+
+</head>
+<body>
+<div>
+    <form id="form" name="form" method="post" enctype="multipart/form-data">
+        <table style="width:1100px;">
+            <tbody>
+                <tr>
+					<th><label>사진파일</label></th>
+					<td><input type="file" name="file1" ></td>
+                </tr>
+                <tr>
+					<th><label>이름</label></th>
+					<td><input type="text" name="name" ></td>
+                </tr>
+                <tr>
+					<th><label>주소</label></th>
+					<td><input type="text" name="address" ></td>
+                </tr>
+                <tr>
+					<th><label>나이</label></th>
+					<td><input type="text" name="age" ></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button type="button" name="fileUpload" onclick="submitContents();">파일전송</button><br>
+        </div>
+    </form>
+</div>
+</body>
+</html>
